@@ -346,4 +346,4 @@ function alterscale() {
   scale(size);
 }
 // function alterscale is nested in function drawcreatures
-
+// test
