@@ -1,3 +1,4 @@
+
 let angle;
 let rad;
 let randompointx;
@@ -6,7 +7,7 @@ let distancetocenter;
 let creatureNum = 1;
 let speedx = [];
 let speedy = [];
-let creaturex = [300];
+let creaturex = [400];
 let creaturey = [300];
 let distances = [];
 let dropperposition;
@@ -15,6 +16,7 @@ let gfactor = 255;
 let bfactor = 47;
 let day = false;
 let size = 1;
+
 function setup() {
   for (let i = 0; i < creaturex.length; i++) {
     distances.push([]);
@@ -75,7 +77,7 @@ function drawbackground() {
 
   //   a fliter of the petri dish
   fill(252, 240, 149);
-  circle(300, 300, 550);
+  circle(400, 300, 550);
   fill(10, 100, 200, 30);
   noStroke();
   circle(width / 2, height / 2, 550);
@@ -83,10 +85,10 @@ function drawbackground() {
   // some decorations outside of the petri dish
   fill(255, 69, 0);
   noStroke();
-  rect(500, 20, 80, 80);
+  rect(700, 20, 80, 80);
   fill(0, 255, 255);
   textSize(25);
-  text("PH", 505, 50);
+  text("PH", 705, 50);
 
   //   scientist's hands
   fill(255, 218, 185);
@@ -99,7 +101,7 @@ function drawbackground() {
   rect(60, 25, 15, 35, 20, 20, 0, 0);
   pop();
   push();
-  translate(505, 540);
+  translate(705, 540);
   rect(60, 0, 15, 60, 20, 20, 0, 0);
   rect(15, -15, 15, 75, 20, 20, 0, 0);
   rect(30, -25, 15, 85, 20, 20, 0, 0);
@@ -123,16 +125,6 @@ function drawbackground() {
   text("150", 450, height / 2 + 15);
   text("200", 500, height / 2 + 15);
 }
-function drawinstructions() {
-  stroke(255);
-  text(
-    "press 's' to change into day, press 'm' to change into night",
-    100,
-    590
-  );
-  text("try to tap the creature!", 200, 15);
-}
-// fucntion drawinsturctions can be added to the website
 function draw() {
   angle = noise(frameCount) * 360;
   drawrefreshingbackground();
@@ -206,31 +198,31 @@ function drawsunandmoon() {
 function calculatedistance() {
   for (let i = 0; i < creaturex.length; i++) {
     distances[i][0] = dist(
-      300,
+      400,
       300,
       creaturex[i] - 30 * size,
       creaturey[i] - 45 * size
     );
     distances[i][1] = dist(
-      300,
+      400,
       300,
       creaturex[i] + 30 * size,
       creaturey[i] - 45 * size
     );
     distances[i][2] = dist(
-      300,
+      400,
       300,
       creaturex[i] - 20 * size,
       creaturey[i] + 55 * size
     );
     distances[i][3] = dist(
-      300,
+      400,
       300,
       creaturex[i] + 20 * size,
       creaturey[i] + 55 * size
     );
-    distances[i][4] = dist(300, 300, creaturex[i] - 65 * size, creaturey[i]);
-    distances[i][5] = dist(300, 300, creaturex[i] + 65 * size, creaturey[i]);
+    distances[i][4] = dist(400, 300, creaturex[i] - 65 * size, creaturey[i]);
+    distances[i][5] = dist(400, 300, creaturex[i] + 65 * size, creaturey[i]);
   }
 }
 function changespeed() {
@@ -267,15 +259,15 @@ function changespeed() {
 }
 function changecolor() {
   fill(rfactor, gfactor, bfactor);
-  let dropperposition = dist(300, 300, mouseX, mouseY);
+  let dropperposition = dist(400, 300, mouseX, mouseY);
   if (mouseIsPressed === true && rfactor > 130 && dropperposition < 275) {
-    rfactor -= 1;
-    gfactor -= 6;
-    bfactor -= 1.1;
+    rfactor -= 0.5;
+    gfactor -= 3;
+    bfactor -= 0.55;
   } else if (rfactor <= 173 || gfactor <= 255 || bfactor <= 47) {
-    rfactor++;
-    gfactor += 6;
-    bfactor += 1.1;
+    rfactor+=0.5;
+    gfactor += 3;
+    bfactor += 0.55;
   }
 }
 function drawcreatures(x, y) {
@@ -355,4 +347,4 @@ function alterscale() {
   scale(size);
 }
 // function alterscale is nested in function drawcreatures
-// this is a test
+
