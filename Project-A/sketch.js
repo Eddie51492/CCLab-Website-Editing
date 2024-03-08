@@ -119,14 +119,13 @@ function drawbackground() {
   point(width / 2, height / 2);
   textSize(15);
   strokeWeight(1);
-  text("50", 350, height / 2 + 15);
-  text("100", 400, height / 2 + 15);
-  text("150", 450, height / 2 + 15);
-  text("200", 500, height / 2 + 15);
+  text("50", 450, height / 2 + 15);
+  text("100", 500, height / 2 + 15);
+  text("150", 550, height / 2 + 15);
+  text("200", 600, height / 2 + 15);
 }
 function draw() {
   angle = noise(frameCount) * 360;
-  drawrefreshingbackground();
   detecttime();
   drawsunandmoon();
   for (let i = 0; i < creaturex.length; i++) {
@@ -140,28 +139,7 @@ function draw() {
   drawdroppers();
   explode();
 }
-function drawrefreshingbackground() {
-  //   a fliter of the petri dish
-  fill(224, 224, 155);
-  noStroke();
-  circle(width / 2, height / 2, 545);
 
-  //    a set of concentric circles as a measurement
-  noFill();
-  strokeWeight(1);
-  stroke(0, 30);
-  for (let i = 4; i > 0; i -= 1) {
-    circle(width / 2, height / 2, i * 100);
-  }
-  strokeWeight(20);
-  point(width / 2, height / 2);
-  textSize(15);
-  strokeWeight(1);
-  text("50", 350, height / 2 + 15);
-  text("100", 400, height / 2 + 15);
-  text("150", 450, height / 2 + 15);
-  text("200", 500, height / 2 + 15);
-}
 function detecttime() {
   if (key === "s") {
     day = true;
