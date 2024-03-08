@@ -32,7 +32,6 @@ function setup() {
   noCursor();
   let cnv= createCanvas(800, 600);
   cnv.parent("p5-canvas-container")
-
   drawbackground();
 }
 function drawbackground() {
