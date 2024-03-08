@@ -1,4 +1,10 @@
 
+
+
+
+
+
+
 let angle;
 let rad;
 let randompointx;
@@ -26,6 +32,7 @@ function setup() {
   noCursor();
   let cnv= createCanvas(800, 600);
   cnv.parent("p5-canvas-container")
+
   drawbackground();
 }
 function drawbackground() {
@@ -139,7 +146,6 @@ function draw() {
   drawdroppers();
   explode();
 }
-
 function detecttime() {
   if (key === "s") {
     day = true;
@@ -325,3 +331,4 @@ function alterscale() {
 }
 // function alterscale is nested in function drawcreatures
 // test
+
