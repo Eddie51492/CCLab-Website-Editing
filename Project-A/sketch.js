@@ -24,10 +24,9 @@ function setup() {
     speedy.push(random(-1, 1));
   }
   noCursor();
-  let cnv= createCanvas(800, 600);
+  let cnv = createCanvas(800, 600);
   cnv.parent("p5-canvas-container")
   drawbackground();
-  drawinstructions();
 }
 function drawbackground() {
   if (day == false) {
