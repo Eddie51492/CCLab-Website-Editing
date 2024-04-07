@@ -105,12 +105,8 @@ class ParticleONE {
     translate(-300, -300);
     push();
     translate(this.x, this.y);
-
-
-
     noStroke();
     circle(0, 0, this.dia);
-
     pop();
     pop();
     pop();
@@ -193,11 +189,6 @@ function drawPath() {
   fill(255);
   arc(width / 2, height / 2, 400, 400, PI / 2, 3 * PI / 2);
   noFill();
-
-
-
-
-
   push();
   translate(width / 2, height / 2 - 100);
   fill(0);
@@ -205,9 +196,6 @@ function drawPath() {
   fill(255);
   noStroke();
   circle(0, 0, 50);
-
-
-
   pop();
   strokeWeight(3);
   push();
@@ -218,5 +206,4 @@ function drawPath() {
   noStroke();
   circle(0, 0, 50);
   pop();
-
 }
