@@ -1,0 +1,61 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  background-color: burlywood;
+}
+
+canvas {
+  display: block;
+}
+
+.minHeadline{
+  color:red;
+}
+
+.specialColor{
+  color:white;
+  background-color: black;
+}
+
+.textBox {
+  background-color: aqua;
+  width: 400px;
+  margin: 10px;
+  border: black 1px dashed;
+  padding: 1px;
+
+}
+
+.textBox p{
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+.textBox .minHeadline{
+  background-color: khaki;
+ 
+}
+.One {
+  position:absolute;
+  left: 10px;
+  top: 40px;
+}
+
+.Two{
+  position: fixed;
+  left:100px;
+  top: 20px;
+}
+
+.Three{
+  position:relative;
+  left: 100px;;
+  top: 20px;
+}
+
+#mainWrapper{
+  background-color: cornflowerblue;
+  width: 400px;
+  border: 4px solid green;
+  margin: auto;
+}

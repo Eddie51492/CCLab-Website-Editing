@@ -1,0 +1,34 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#canvasContainer{
+  position: fixed;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  background-color: lemonchiffon;
+  outline: red 4px solid;
+  width: 100%;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textBox{
+  width: 500px;
+  margin: auto;
+  outline: green 1px dotted;
+}
+
+.spacer{
+  width: 100%;
+  height: 1000px;
+}

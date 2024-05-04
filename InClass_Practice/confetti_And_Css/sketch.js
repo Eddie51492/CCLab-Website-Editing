@@ -1,9 +1,9 @@
 let confettis = [];
-let numConfetti = 10;
+let numConfetti = 50;
 let backgroundHug;
 
 function setup() {
-  let canvas = createCanvas(400, 4000);
+  let canvas = createCanvas(400, 400);
   canvas.parent("canvasContainer");
 
   colorMode(HSB);
@@ -55,7 +55,7 @@ class Confetti {
     this.speedY += 0.1;
     this.speedX *= 0.99;
 
-    if (this.y > 1000){
+    if (this.y > 500){
       this.OnCanvas = false; 
     }
 

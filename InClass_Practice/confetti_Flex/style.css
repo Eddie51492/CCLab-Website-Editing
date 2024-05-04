@@ -1,0 +1,50 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+canvas {
+  display: block;
+}
+
+#mainFlexContainer{
+ display: flex;
+ outline: 1px dashed;
+ flex-direction: row;
+ width: 100%;
+ max-width: 1000px;
+ margin: auto;
+ 
+}
+
+
+/* style that changes at a size lower than
+800 pixels, can be defined inside this
+breakpoint bracket: */
+@media(max-width:800px){
+ 
+ 
+  #mainFlexContainer{
+    flex-direction: column;
+    max-width: 400px;
+  }
+  #canvasContainer{
+    order: 1;
+  }
+  .intro{
+    order: 2;
+  }
+  .credit{
+    order: 3;
+  }
+
+
+
+}
+
+@media(min-width:1000px){
+
+  body{
+    background-color: black;
+  }
+}
