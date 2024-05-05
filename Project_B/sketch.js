@@ -54,11 +54,11 @@ function draw() {
 
 function mousePressed() {
   if (mouseX > NowBlockX && mouseX < NowBlockX + 30 && mouseY > NowBlockY && mouseY < NowBlockY + 100) {
-    window.location.href = "Now";
+    window.location.href = "Now/index.html";
   }
 
   if (mouseX > FutureBlockX && mouseX < FutureBlockX + 30 && mouseY > FutureBlockY && mouseY < FutureBlockY + 100) {
-    window.location.href = "Future";
+    window.location.href = "Future/index.html";
   }
 
   for (let i = 0; i < 10; i++) {
