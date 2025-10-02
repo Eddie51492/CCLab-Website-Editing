@@ -29,11 +29,10 @@ function draw() {
 
 
   for (let i = confettis.length-1; i>=0; i-=1){
-    if(confettis[i].OnCanvas == false){
-      confettis.splice(i, 1);
+   if(confettis[i].OnCanvas == false){
+     confettis.splice(i, 1);
     }
-
-  }
+ }
 
 }
 
